@@ -3,8 +3,11 @@
 #
 # Examples:
 #
-  post = Post.create([{ title: 'Star Wars' }, { content: 'Lord of the Rings' }])
+  # post = Post.create([{ title: 'Star Wars' }, { content: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # 10.times do
 #   post = Post.create!(title: Faker::Name.name, content: Faker::Lorem::sentence(word_count: 8))
 # end
+5.times do |i|
+  Post.create(title: "Note #{i + 1}", content: 'Lorem ipsum saves lives')
+end
