@@ -16,13 +16,6 @@ module Mutations
     #   { post: post }
     # end
 
-    # def resolve(title: nil, content: nil)
-    #   Post.create!(
-    #     title: title,
-    #     content: content
-    #   )
-    # end
-
     # def resolve(title:, content:)
     #   Post.create!(
     #     title: title,
@@ -30,14 +23,36 @@ module Mutations
     #   )
     # end
 
-    def resolve(**args)
-      post = Post.create(title: args[:title], content: args[:content])
-      {
-        post: post,
-      }
+
+
+    # def resolve(**args)
+    #   post = Post.create(title: args[:title], content: args[:content])
+    #   {
+    #     post: post,
+    #   }
+    # end
+
+    # ↑の書き方は↓だと問題ない
+
+    # mutation {
+    #   createPost(
+    #       title: "title"
+    #       content: "content"
+    #   ){
+    #     post {
+    #       title
+    #       content
+    #     }
+    #   }
+    # }
+
+    # how to graphqlと全く同じ書き方
+    def resolve(title: nil, content: nil)
+      Post.create!(
+        title: title,
+        content: content
+      )
     end
-
-
 
   end
 end

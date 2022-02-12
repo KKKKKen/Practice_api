@@ -38,6 +38,7 @@ group :development do
   # gem 'spring'
   gem 'annotate'
   gem 'graphiql-rails'
+  gem 'graphql-ruby'
 
 end
 
