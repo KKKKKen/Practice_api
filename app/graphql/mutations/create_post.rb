@@ -25,12 +25,13 @@ module Mutations
 
 
 
-    # def resolve(**args)
-    #   post = Post.create(title: args[:title], content: args[:content])
-    #   {
-    #     post: post,
-    #   }
-    # end
+    # これがinputObjectを考慮したやり方かもしれない
+    def resolve(**args)
+      post = Post.create(title: args[:title], content: args[:content])
+      {
+        post: post
+      }
+    end
 
     # ↑の書き方は↓だと問題ない
 
@@ -47,12 +48,16 @@ module Mutations
     # }
 
     # how to graphqlと全く同じ書き方
-    def resolve(title: nil, content: nil)
-      Post.create!(
-        title: title,
-        content: content
-      )
-    end
+    # def resolve(title: nil, content: nil)
+    #   Post.create!(
+    #     title: title,
+    #     content: content
+    #   )
+    # end
+
+# inputObjectを考慮してdefメソッドを定義する必要がある
+
+
 
   end
 end
