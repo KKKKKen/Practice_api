@@ -6,7 +6,9 @@ application up and running.
 Things you may want to cover:
 
 * How to start
+```bash
 rails s
+```
 * Ruby version
 3.0.3
 * System dependencies
