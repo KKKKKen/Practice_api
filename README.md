@@ -1,28 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
 
-* How to start
-```bash
+| name     | install                                                  |
+| -------- | -------------------------------------------------------- |
+| rbenv   | `brew install rbenv` |
+
+
+# How to start
+
+git clone
+```
+git clone このリポジトリのパス
+```
+
+rubyの設定
+```
+rbenv install 3.0.3
+rbenv local 3.0.3
+```
+
+サーバー起動
+```
 rails s
 ```
-* Ruby version
-3.0.3
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
